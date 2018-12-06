@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:padding="@dimen/divider_gap_vert"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/dialogPickup">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/floating_label_text_size"
+            android:text="@string/shared"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shared"
+            android:id="@+id/tv_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/floating_label_text_size"
+            android:textAlignment="viewEnd"
+            android:layout_weight="0.5"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:text="@string/how_many_seats"/>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="+"
+        android:textAlignment="center"
+        android:layout_margin="20dp"
+        android:id="@+id/plus"
+        android:padding="5dp"
+        android:textSize="@dimen/txt_size_20"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_margin="20dp"
+        android:id="@+id/number"
+        android:padding="5dp"
+        android:textSize="@dimen/txt_size_20"
+        />
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:text="-"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:id="@+id/minus"
+        android:padding="5dp"
+        android:textSize="@dimen/txt_size_20"
+        />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/submitt"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="@string/confirmSeats"/>
+
+</LinearLayout>

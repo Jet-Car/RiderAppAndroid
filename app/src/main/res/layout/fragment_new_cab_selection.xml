@@ -1,0 +1,384 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="car.fragments.CabSelectionFragment">
+
+    <ProgressBar
+        android:id="@+id/mProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        android:visibility="invisible" />
+
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/below_shadow"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/rentalBackImage"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_back_arrow"
+            android:tint="@color/appThemeColor_1"
+            android:visibility="gone" />
+
+
+        <car.view.MTextView
+            android:id="@+id/noServiceTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Service not available in this location"
+            android:textColor="#2f2f2f"
+            android:textSize="@dimen/txt_size_14"
+            android:visibility="gone"
+            app:customTypeFace="roboto_light" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rentalarea"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/carTypeRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+            <car.view.anim.loader.AVLoadingIndicatorView
+                android:id="@+id/loaderView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:indicator="BallSpinFadeLoader"
+                app:indicator_color="#000000" />
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rentalarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/rentPkgImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="-5dp"
+                    android:layout_toStartOf="@+id/rentalPkg"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/rent_car"
+                    android:visibility="gone" />
+
+                <car.view.MTextView
+                    android:id="@+id/rentalPkg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:background="#000000"
+                    android:gravity="center"
+                    android:text="Rental"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <car.view.MTextView
+                android:id="@+id/rentalPkgDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:foregroundTint="@color/black"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Rent a cab at flexible hourly packages"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_size_12"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/below_shadow" />
+
+    <LinearLayout
+        android:id="@+id/cashcardarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/paymentArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/payImgView"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_cash_new" />
+
+            <car.view.MTextView
+                android:id="@+id/payTypeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center"
+                android:text="Cash"
+                android:textAlignment="viewStart"
+                android:textColor="#2f2f2f"
+                android:textSize="@dimen/txt_size_14"
+                app:customTypeFace="roboto_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/promoArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_promo" />
+
+            <car.view.MTextView
+                android:id="@+id/promoTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center|start"
+                android:text="Promo"
+                android:textAlignment="viewStart"
+                android:textColor="#2f2f2f"
+                android:textSize="@dimen/txt_size_14"
+                app:customTypeFace="roboto_light" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seatsLL"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_weight="0.6"
+            android:layout_margin="10dp"
+            android:text="@string/how_many_seats"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/amount_tv"
+                android:layout_weight="0.2"
+                android:layout_margin="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="+"
+                android:textAlignment="center"
+                android:layout_margin="20dp"
+                android:id="@+id/plus"
+                android:padding="5dp"
+                android:textSize="@dimen/txt_size_20"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_margin="20dp"
+                android:id="@+id/number"
+                android:padding="5dp"
+                android:textSize="@dimen/txt_size_20"
+                />
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="-"
+                android:layout_margin="20dp"
+                android:textAlignment="center"
+                android:id="@+id/minus"
+                android:padding="5dp"
+
+                android:textSize="@dimen/txt_size_20"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:id="@+id/payTypeSelectArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/paymentTypeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/casharea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:src="@mipmap/ic_cash_new" />
+
+                <RadioButton
+                    android:id="@+id/cashRadioBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#F2F2F2"
+                    android:button="@null"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:paddingStart="10dp"
+                    android:text="Cash"
+                    android:textColor="#2F2F2F"
+                    android:textSize="@dimen/txt_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:src="@mipmap/ic_card_new" />
+
+                <RadioButton
+                    android:id="@+id/cardRadioBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#F2F2F2"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:paddingStart="10dp"
+                    android:text="Card"
+                    android:textColor="#2F2F2F"
+                    android:textSize="@dimen/txt_size_16" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <include
+                android:id="@+id/ride_now_btn"
+                layout="@layout/btn_type_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/all_btn_height"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imageLaterarea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2">
+
+            <ImageView
+                android:id="@+id/img_ridelater"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ride_later" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

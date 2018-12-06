@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="8dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/contentArea"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/mainimagearea"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+         >
+
+            <FrameLayout
+                android:id="@+id/imagarea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <car.view.SelectableRoundedImageView
+                        android:id="@+id/carTypeImgView"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                </LinearLayout>
+                <!--app:sriv_border_width="1dp"-->
+                <!--app:sriv_left_bottom_corner_radius="30dip"-->
+                <!--app:sriv_left_top_corner_radius="30dip"-->
+                <!--app:sriv_oval="true"-->
+                <!--app:sriv_right_bottom_corner_radius="30dip"-->
+                <!--app:sriv_right_top_corner_radius="30dip"-->
+
+                <car.view.anim.loader.AVLoadingIndicatorView
+                    android:id="@+id/loaderView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"
+                    app:indicator="BallPulse"
+                    app:indicator_color="@color/appThemeColor_2" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_centerInParent="true"
+                android:id="@+id/imagareaselcted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <car.view.SelectableRoundedImageView
+                        android:id="@+id/carTypeImgViewselcted"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+
+                       />
+                </LinearLayout>
+                <!--app:sriv_border_width="1dp"-->
+                <!--app:sriv_left_bottom_corner_radius="35dip"-->
+                <!--app:sriv_left_top_corner_radius="35dip"-->
+                <!--app:sriv_oval="true"-->
+                <!--app:sriv_right_bottom_corner_radius="35dip"-->
+                <!--app:sriv_right_top_corner_radius="35dip"-->
+
+                <car.view.anim.loader.AVLoadingIndicatorView
+                    android:id="@+id/loaderViewselected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"
+                    app:indicator="BallPulse"
+                    app:indicator_color="@color/appThemeColor_2" />
+
+
+            </FrameLayout>
+        </RelativeLayout>
+
+        <car.view.MTextView
+            android:id="@+id/carTypeTitle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mainimagearea"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="#BABABA"
+            android:textSize="@dimen/txt_size_14"
+            app:customTypeFace="roboto_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carTypeTitle"
+            android:padding="8dp"
+            android:layout_toEndOf="@+id/mainimagearea"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.4">
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/avatar"
+                    android:layout_gravity="center_vertical"/>
+                <car.view.MTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/m_tv"/>
+
+
+            </LinearLayout>
+
+            <car.view.MTextView
+                android:id="@+id/totalfare"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:maxLines="1"
+
+                android:textColor="#BABABA"
+                android:textSize="@dimen/txt_size_14"
+                app:customTypeFace="roboto_light" />
+
+            <ImageView
+                android:id="@+id/infoimage"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="5dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_information" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+{
+  "project_info": {
+    "project_number": "348851977600",
+    "firebase_url": "https://jetcar-app.firebaseio.com",
+    "project_id": "jetcar-app",
+    "storage_bucket": "jetcar-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348851977600:android:70e448b31e818f73",
+        "android_client_info": {
+          "package_name": "car.jet.riderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348851977600-72cbs2ue4ucr17e27isf1o1q0ub3npbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "car.jet.riderapp",
+            "certificate_hash": "09162e62458fd9d838ce4c3ff3708e5f47d7597a"
+          }
+        },
+        {
+          "client_id": "348851977600-c0krbljqs28qjeafvfg2o8f2drbaa8vn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCehLYDuSezgFPM6qeZajFslSb7u0GE4Qo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348851977600-c0krbljqs28qjeafvfg2o8f2drbaa8vn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "348851977600-k3e6e7bmvjt4c3epolp6ifpbdr1qtd3b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "car.jet.riderapp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348851977600:android:d78168048067df41",
+        "android_client_info": {
+          "package_name": "car.jet.riderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348851977600-8tbbvqe0t2qfv533trsdoncvp0lg91sv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "car.jet.riderapp",
+            "certificate_hash": "09162e62458fd9d838ce4c3ff3708e5f47d7597a"
+          }
+        },
+        {
+          "client_id": "348851977600-c0krbljqs28qjeafvfg2o8f2drbaa8vn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCehLYDuSezgFPM6qeZajFslSb7u0GE4Qo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348851977600-c0krbljqs28qjeafvfg2o8f2drbaa8vn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "348851977600-k3e6e7bmvjt4c3epolp6ifpbdr1qtd3b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "car.jet.riderapp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348851977600:android:fa703ac5afccb794",
+        "android_client_info": {
+          "package_name": "com.jet.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348851977600-e1fmcl3k7i7i242h23iaccbee2n2i76e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jet.driver",
+            "certificate_hash": "09162e62458fd9d838ce4c3ff3708e5f47d7597a"
+          }
+        },
+        {
+          "client_id": "348851977600-c0krbljqs28qjeafvfg2o8f2drbaa8vn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCehLYDuSezgFPM6qeZajFslSb7u0GE4Qo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348851977600-c0krbljqs28qjeafvfg2o8f2drbaa8vn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "348851977600-k3e6e7bmvjt4c3epolp6ifpbdr1qtd3b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "car.jet.riderapp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

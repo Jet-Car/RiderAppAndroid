@@ -1,0 +1,27 @@
+package car.pubnub.api.interceptors;
+
+import car.pubnub.api.PubNub;
+import car.pubnub.api.PubNubUtil;
+
+import java.io.IOException;
+
+import okhttp3.Interceptor;
+import okhttp3.Request;
+import okhttp3.Response;
+
+
+public class SignatureInterceptor implements Interceptor {
+
+    private PubNub pubNub;
+
+    public SignatureInterceptor(PubNub pubNubInstance) {
+        this.pubNub = pubNubInstance;
+    }
+
+    @Override
+    public Response intercept(Chain chain) throws IOException {
+        Request originalRequest = chain.request();
+        Request request = PubNubUtil.requestSigner(originalRequest, pubNub.getConfiguration(), pubNub.getTimestamp());
+        return chain.proceed(request);
+    }
+}

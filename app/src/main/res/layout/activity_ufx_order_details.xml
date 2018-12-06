@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ufx_order_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/disable_color"
+    android:orientation="vertical"
+    tools:context="car.jet.riderapp.UfxOrderDetailsActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ordersAreaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal"
+
+        android:padding="10dp">
+
+
+        <car.view.MTextView
+            android:id="@+id/serviceItemname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="start|center"
+            android:paddingStart="5dp"
+            android:text="item"
+            android:textAlignment="viewStart"
+            android:textColor="#030303"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotobold" />
+
+        <car.view.MTextView
+            android:id="@+id/servicepriceTxtView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:paddingEnd="5dp"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="#4d4949"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotolightFont" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/providerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ordersAreaLayout"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal"
+
+        android:padding="10dp">
+
+
+        <car.view.MTextView
+            android:id="@+id/providerHname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="start|center"
+            android:paddingStart="5dp"
+            android:text="item"
+            android:textAlignment="viewStart"
+            android:textColor="#030303"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotobold" />
+
+        <car.view.MTextView
+            android:id="@+id/providerVname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:paddingEnd="5dp"
+            android:textAlignment="viewEnd"
+
+            android:textColor="#4d4949"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotolightFont"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bookingdateLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/providerLayout"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="horizontal"
+
+        android:padding="10dp">
+
+
+        <car.view.MTextView
+            android:id="@+id/bookingdateHname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="start|center"
+            android:paddingStart="5dp"
+            android:text="item"
+            android:textAlignment="viewStart"
+            android:textColor="#030303"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotobold" />
+
+        <car.view.MTextView
+            android:id="@+id/bookingdateVname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:paddingEnd="5dp"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="#4d4949"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotolightFont"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/commentarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promoarea"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <car.view.MTextView
+            android:id="@+id/commentHname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:paddingStart="5dp"
+            android:text="item"
+            android:textAlignment="viewStart"
+            android:textColor="@color/appThemeColor_1"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotobold" />
+
+        <include
+            android:id="@+id/commentBox"
+            layout="@layout/editbox_form_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/promoarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookingtimeLayout"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+
+        android:orientation="horizontal"
+        android:paddingEnd="15dp"
+        android:paddingStart="10dp">
+
+        <include
+            android:id="@+id/voucherCodeBox"
+            layout="@layout/editbox_form_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1" />
+
+        <car.view.MTextView
+            android:id="@+id/applyPromoTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            android:background="@drawable/timeslot_border"
+            android:gravity="center"
+
+            android:paddingBottom="10dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:text="Apply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_14"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/header"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <include
+            android:id="@+id/proceedToCheckOutBtn"
+            layout="@layout/btn_type_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/all_btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bookingtimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bookingdateLayout"
+        android:layout_gravity="center"
+
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <car.view.MTextView
+            android:id="@+id/bookingtimeHname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="start|center"
+            android:paddingStart="5dp"
+            android:text="item"
+            android:textAlignment="viewStart"
+            android:textColor="#030303"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotobold" />
+
+        <car.view.MTextView
+            android:id="@+id/bookingtimeVname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:paddingEnd="5dp"
+            android:text=""
+            android:textAlignment="viewEnd"
+            android:textColor="#4d4949"
+            android:textSize="@dimen/txt_size_16"
+            app:customTypeFace="@string/robotolightFont" />
+
+    </LinearLayout>
+
+</RelativeLayout>
